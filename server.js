@@ -11,7 +11,7 @@ app.get("/" , (req ,res)=>{
 
 app.use(express.json())
 app.post("/register" , (req ,res)=>{
-    res.send("post request",req.body)
+    res.send({"post request":req.body})
 })
 
 
