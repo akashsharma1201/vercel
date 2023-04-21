@@ -1,4 +1,5 @@
 import  express  from "express";
+import route from "./route";
 
 const app = express();
 
@@ -10,9 +11,7 @@ app.get("/" , (req ,res)=>{
 })
 
 app.use(express.json())
-app.post("/register" , (req ,res)=>{
-    res.send({"post request":req.body})
-})
+app.use("/user" , route)
 
 
 app.listen("5000" , ()=>{
