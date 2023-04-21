@@ -3,13 +3,13 @@ import  express  from "express";
 const app = express();
 
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
 app.get("/" , (req ,res)=>{
     res.send("vercel node upload")
 })
 
-app.use(express.use())
+app.use(express.json())
 app.post("/register" , (req ,res)=>{
     res.send("post request",req.body)
 })
