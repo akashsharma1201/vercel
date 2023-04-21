@@ -6,6 +6,7 @@ app.get("/" , (req ,res)=>{
     res.send("vercel node upload")
 })
 
+app.use(express.use())
 app.post("/register" , (req ,res)=>{
     res.send("post request",req.body)
 })
